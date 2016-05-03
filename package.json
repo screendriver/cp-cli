@@ -1,0 +1,42 @@
+{
+  "name": "cp-cli",
+  "version": "1.0.0",
+  "description": "A \"cp\" CLI util for Node.js",
+  "scripts": {
+    "clean": "rimraf bin",
+    "prepublish": "npm run lint && npm run test && babel src -d bin",
+    "lint": "eslint src test",
+    "test": "mocha --compilers js:babel-register test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/screendriver/cp-cli.git"
+  },
+  "keywords": [
+    "cp",
+    "cp -R -L",
+    "copy"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/screendriver/cp-cli/issues"
+  },
+  "homepage": "https://github.com/screendriver/cp-cli#readme",
+  "bin": "bin/cp-cli.js",
+  "dependencies": {
+    "fs-extra": "^0.30.0",
+    "yargs": "^4.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.8.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-register": "^6.8.0",
+    "chai": "^3.5.0",
+    "dirty-chai": "^1.2.2",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb-base": "^2.0.0",
+    "eslint-plugin-import": "^1.6.1",
+    "mocha": "^2.4.5",
+    "rimraf": "^2.5.2"
+  }
+}
