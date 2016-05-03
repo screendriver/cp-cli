@@ -1,4 +1,4 @@
-# cprl
+# cp-cli
 
 The [UNIX command](https://en.wikipedia.org/wiki/Cp_(Unix)) `cp` for Node.js
 which is useful for cross platform support.
