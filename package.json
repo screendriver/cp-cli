@@ -1,6 +1,6 @@
 {
   "name": "cp-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A 'cp' CLI util for Node.js",
   "scripts": {
     "clean": "rimraf bin",
