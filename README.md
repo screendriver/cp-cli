@@ -19,5 +19,5 @@ After that you can use `cp-cli` from your command prompt
 Usage: cp-cli [-L] source target
 
 Options:
-  -d, --dereference  Dereference symlinks                              [boolean]
+  -d, --dereference  Dereference symlinks  [boolean]
 ```
