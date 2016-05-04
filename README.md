@@ -16,7 +16,7 @@ After that you can use `cp-cli` from your command prompt
 
 ```sh
 ❯ cp-cli
-Usage: cp-cli [-L] source target
+Usage: cp-cli [-d] source target
 
 Options:
   -d, --dereference  Dereference symlinks  [boolean]
