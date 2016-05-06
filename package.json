@@ -5,8 +5,7 @@
   "scripts": {
     "clean": "rimraf bin",
     "prepublish": "npm run lint && babel src -d bin",
-    "lint": "eslint src test",
-    "test": "mocha --compilers js:babel-register test/*.js"
+    "lint": "eslint src test"
   },
   "repository": {
     "type": "git",
