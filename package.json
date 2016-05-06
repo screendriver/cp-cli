@@ -4,7 +4,7 @@
   "description": "A 'cp' CLI util for Node.js",
   "scripts": {
     "clean": "rimraf bin",
-    "prepublish": "npm run lint && npm run test && babel src -d bin",
+    "prepublish": "npm run lint && babel src -d bin",
     "lint": "eslint src test",
     "test": "mocha --compilers js:babel-register test/*.js"
   },
