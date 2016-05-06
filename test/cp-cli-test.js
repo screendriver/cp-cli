@@ -15,17 +15,17 @@ describe('cp-cli', () => {
   });
 
   it('should print a help text when no arguments given', () => {
-    const { stderr } = shell.exec('cp-cli');
+    const { stderr } = shell.exec('node bin/cp-cli');
     expect(stderr).to.not.be.empty();
   });
 
   it('should print a help text when only one argument was given', () => {
-    const { stderr } = shell.exec('cp-cli foo');
+    const { stderr } = shell.exec('node bin/cp-cli foo');
     expect(stderr).to.not.be.empty();
   });
 
   it('should copy a source file to target dir', callback => {
-    const { stderr } = shell.exec('cp-cli test/assets/foo.txt out/foo.txt');
+    const { stderr } = shell.exec('node bin/cp-cli test/assets/foo.txt out/foo.txt');
     expect(stderr).to.be.empty();
     fse.stat('out/foo.txt', (err, stats) => {
       expect(err).to.be.null();
@@ -38,7 +38,7 @@ describe('cp-cli', () => {
     shell.cd('test/assets');
     shell.ln('-s', 'foo.txt', 'bar.txt');
     shell.cd('../..');
-    const { stderr } = shell.exec('cp-cli -d test/assets out');
+    const { stderr } = shell.exec('node bin/cp-cli -d test/assets out');
     expect(stderr).to.be.empty();
     const promises = [];
     let promise = new Promise((resolve, reject) => {
