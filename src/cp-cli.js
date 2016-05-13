@@ -9,6 +9,8 @@ const argv = yargs
   .boolean('d')
   .alias('d', 'dereference')
   .describe('d', 'Dereference symlinks')
+  .help('h')
+  .alias('h', 'help')
   .argv;
 
 const source = argv._[0];
