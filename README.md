@@ -15,9 +15,21 @@ $ npm install -g cp-cli
 After that you can use `cp-cli` from your command prompt
 
 ```sh
-❯ cp-cli
+$ cp-cli
 Usage: cp-cli [-d] source target
 
 Options:
   -d, --dereference  Dereference symlinks  [boolean]
+```
+
+You can copy files directly
+
+```sh
+$ cp-cli foo.txt bar.txt
+```
+
+or copy a file into an existing directory
+
+```sh
+$ cp-cli foo.text dest/
 ```
