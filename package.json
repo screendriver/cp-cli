@@ -1,6 +1,6 @@
 {
   "name": "cp-cli",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A 'cp' CLI util for Node.js",
   "scripts": {
     "build": "tsc",
@@ -13,7 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/screendriver/cp-cli.git"
   },
-  "keywords": ["cp", "cp -R -L", "copy"],
+  "keywords": [
+    "cp",
+    "cp -R -L",
+    "copy"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/screendriver/cp-cli/issues"
@@ -25,8 +29,15 @@
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "testPathIgnorePatterns": ["<rootDir>/bin"],
-    "moduleFileExtensions": ["ts", "tsx", "js", "json"]
+    "testPathIgnorePatterns": [
+      "<rootDir>/bin"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
   },
   "dependencies": {
     "fs-extra": "^4.0.1",
