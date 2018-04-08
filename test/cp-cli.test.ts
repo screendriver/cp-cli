@@ -1,5 +1,6 @@
 import * as fse from 'fs-extra';
 import * as shell from 'shelljs';
+import { platform } from 'os';
 
 describe('cp-cli', () => {
   afterEach(async () => {
@@ -29,16 +30,18 @@ describe('cp-cli', () => {
     });
   });
 
-  it('should dereference symlinks', async () => {
-    shell.cd('test/assets');
-    shell.ln('-s', 'foo.txt', 'bar.txt');
-    shell.cd('../..');
-    const { stderr } = shell.exec('node bin/cp-cli -d test/assets out');
-    expect(stderr).toEqual('');
-    let stats = await fse.stat('out/foo.txt');
-    expect(stats.isFile()).toEqual(true);
-    stats = await fse.stat('out/bar.txt');
-    expect(stats.isFile()).toEqual(true);
-    expect(stats.isSymbolicLink()).toEqual(false);
-  });
+  if (platform() !== 'win32') {
+    it('should dereference symlinks', async () => {
+      shell.cd('test/assets');
+      shell.ln('-s', 'foo.txt', 'bar.txt');
+      shell.cd('../..');
+      const { stderr } = shell.exec('node bin/cp-cli -d test/assets out');
+      expect(stderr).toEqual('');
+      let stats = await fse.stat('out/foo.txt');
+      expect(stats.isFile()).toEqual(true);
+      stats = await fse.stat('out/bar.txt');
+      expect(stats.isFile()).toEqual(true);
+      expect(stats.isSymbolicLink()).toEqual(false);
+    });
+  }
 });
