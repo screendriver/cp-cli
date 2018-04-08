@@ -13,11 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/screendriver/cp-cli.git"
   },
-  "keywords": [
-    "cp",
-    "cp -R -L",
-    "copy"
-  ],
+  "keywords": ["cp", "cp -R -L", "copy"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/screendriver/cp-cli/issues"
@@ -29,31 +25,24 @@
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "testPathIgnorePatterns": [
-      "<rootDir>/bin"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ]
+    "testPathIgnorePatterns": ["<rootDir>/bin"],
+    "moduleFileExtensions": ["ts", "tsx", "js", "json"]
   },
   "dependencies": {
-    "fs-extra": "^4.0.1",
-    "yargs": "^8.0.2"
+    "fs-extra": "5.0.0",
+    "yargs": "11.0.0"
   },
   "devDependencies": {
-    "@types/fs-extra": "^4.0.0",
-    "@types/jest": "^20.0.6",
-    "@types/yargs": "^8.0.2",
-    "jest": "^20.0.4",
-    "rimraf": "^2.5.2",
-    "shelljs": "^0.7.0",
-    "ts-jest": "^20.0.10",
-    "tslint": "^5.6.0",
-    "tslint-config-prettier": "^1.3.0",
-    "tslint-language-service": "^0.9.6",
-    "typescript": "^2.4.2"
+    "@types/fs-extra": "5.0.1",
+    "@types/jest": "22.2.2",
+    "@types/yargs": "11.0.0",
+    "jest": "22.4.3",
+    "rimraf": "2.6.2",
+    "shelljs": "0.8.1",
+    "ts-jest": "22.4.2",
+    "tslint": "5.9.1",
+    "tslint-config-prettier": "1.10.0",
+    "tslint-language-service": "0.9.9",
+    "typescript": "2.8.1"
   }
 }
