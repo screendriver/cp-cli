@@ -3,8 +3,7 @@ import * as shell from 'shelljs';
 
 describe('cp-cli', () => {
   afterEach(async () => {
-    await fse.remove('out');
-    await fse.remove('test/assets/bar.txt');
+    await Promise.all([fse.remove('out'), fse.remove('test/assets/bar.txt')]);
   });
 
   it('should print a help text when no arguments given', () => {
@@ -19,7 +18,7 @@ describe('cp-cli', () => {
 
   it('should copy a source file to target dir', done => {
     const { stderr } = shell.exec(
-      'node bin/cp-cli test/assets/foo.txt out/foo.txt'
+      'node bin/cp-cli test/assets/foo.txt out/foo.txt',
     );
     expect(stderr).toEqual('');
     fse.stat('out/foo.txt', (err, stats) => {
@@ -40,5 +39,15 @@ describe('cp-cli', () => {
     stats = await fse.stat('out/bar.txt');
     expect(stats.isFile()).toEqual(true);
     expect(stats.isSymbolicLink()).toEqual(false);
+  });
+
+  it.only('should copy directory content', done => {
+    const { stderr } = shell.exec('node bin/cp-cli test/assets out');
+    expect(stderr).toEqual('');
+    fse.stat('out/foo.txt', (err, stats) => {
+      expect(err).toBeNull();
+      expect(stats.isFile()).toEqual(true);
+      done();
+    });
   });
 });
