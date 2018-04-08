@@ -41,7 +41,7 @@ describe('cp-cli', () => {
     expect(stats.isSymbolicLink()).toEqual(false);
   });
 
-  it.only('should copy directory content', done => {
+  it('should copy directory content', done => {
     const { stderr } = shell.exec('node bin/cp-cli test/assets out');
     expect(stderr).toEqual('');
     fse.stat('out/foo.txt', (err, stats) => {
