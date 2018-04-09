@@ -53,4 +53,15 @@ describe('cp-cli', () => {
       done();
     });
   });
+
+  it('should copy directory content when target directory does not exist', async done => {
+    await fse.ensureDir('out');
+    const { stderr } = shell.exec('node bin/cp-cli test/assets out');
+    expect(stderr).toEqual('');
+    fse.stat('out/foo.txt', (err, stats) => {
+      expect(err).toBeNull();
+      expect(stats.isFile()).toEqual(true);
+      done();
+    });
+  });
 });
