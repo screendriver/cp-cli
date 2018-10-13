@@ -30,7 +30,7 @@
     "moduleFileExtensions": ["ts", "tsx", "js", "json"]
   },
   "dependencies": {
-    "fs-extra": "5.0.0",
+    "fs-extra": "7.0.0",
     "yargs": "11.1.0"
   },
   "devDependencies": {
