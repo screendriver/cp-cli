@@ -1,10 +1,9 @@
 # cp-cli
 
 [![Build Status](https://travis-ci.org/screendriver/cp-cli.svg?branch=master)](https://travis-ci.org/screendriver/cp-cli)
-[![Dependency Status](https://david-dm.org/screendriver/cp-cli.svg)](https://david-dm.org/screendriver/cp-cli)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 
-The [UNIX command](https://en.wikipedia.org/wiki/Cp_(Unix)) `cp` for Node.js
+The [UNIX command](<https://en.wikipedia.org/wiki/Cp_(Unix)>) `cp` for Node.js
 which is useful for cross platform support.
 
 Just install it with
