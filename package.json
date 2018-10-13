@@ -37,7 +37,7 @@
     "@types/fs-extra": "5.0.4",
     "@types/jest": "23.3.5",
     "@types/yargs": "11.1.2",
-    "husky": "0.14.3",
+    "husky": "1.1.2",
     "jest": "22.4.4",
     "prettier": "1.14.3",
     "pretty-quick": "1.8.0",
