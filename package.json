@@ -40,7 +40,7 @@
     "husky": "0.14.3",
     "jest": "22.4.4",
     "prettier": "1.14.3",
-    "pretty-quick": "1.4.1",
+    "pretty-quick": "1.8.0",
     "rimraf": "2.6.2",
     "shelljs": "0.8.2",
     "ts-jest": "22.4.2",
