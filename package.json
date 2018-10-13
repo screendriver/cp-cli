@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@types/fs-extra": "5.0.4",
-    "@types/jest": "22.2.3",
+    "@types/jest": "23.3.5",
     "@types/yargs": "11.1.2",
     "husky": "0.14.3",
     "jest": "22.4.4",
