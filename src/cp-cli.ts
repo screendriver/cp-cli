@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import * as fse from 'fs-extra';
-import * as yargs from 'yargs';
+import fse from 'fs-extra';
+import yargs from 'yargs';
 
 const argv = yargs
   .usage('Usage: $0 [-L] source target')

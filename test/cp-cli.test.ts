@@ -1,6 +1,6 @@
-import * as fse from 'fs-extra';
+import fse from 'fs-extra';
 import { platform } from 'os';
-import * as shell from 'shelljs';
+import shell from 'shelljs';
 
 describe('cp-cli', () => {
   afterEach(async () => {
