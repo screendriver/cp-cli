@@ -8,7 +8,7 @@
     "precommit": "pretty-quick --staged",
     "prepublish": "npm run build && npm run lint && npm run test",
     "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
-    "test": "tsc && jest"
+    "test": "tape -r source-map-support/register 'bin/test/**/*.js' | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -28,36 +28,23 @@
     "bin/cp-cli.js"
   ],
   "bin": "bin/cp-cli.js",
-  "jest": {
-    "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "testPathIgnorePatterns": [
-      "<rootDir>/bin"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ]
-  },
   "dependencies": {
     "fs-extra": "7.0.0",
     "yargs": "12.0.2"
   },
   "devDependencies": {
     "@types/fs-extra": "5.0.4",
-    "@types/jest": "23.3.5",
+    "@types/shelljs": "0.8.0",
+    "@types/tape": "4.2.32",
     "@types/yargs": "12.0.1",
     "husky": "1.1.2",
-    "jest": "23.6.0",
     "prettier": "1.14.3",
     "pretty-quick": "1.8.0",
     "rimraf": "2.6.2",
     "shelljs": "0.8.2",
-    "ts-jest": "22.4.6",
+    "source-map-support": "0.5.9",
+    "tap-spec": "5.0.0",
+    "tape": "4.9.1",
     "tslint": "5.11.0",
     "tslint-config-prettier": "1.15.0",
     "tslint-language-service": "0.9.9",
