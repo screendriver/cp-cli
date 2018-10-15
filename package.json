@@ -14,20 +14,34 @@
     "type": "git",
     "url": "git+https://github.com/screendriver/cp-cli.git"
   },
-  "keywords": ["cp", "cp -R -L", "copy"],
+  "keywords": [
+    "cp",
+    "cp -R -L",
+    "copy"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/screendriver/cp-cli/issues"
   },
   "homepage": "https://github.com/screendriver/cp-cli#readme",
+  "files": [
+    "bin/cp-cli.js"
+  ],
   "bin": "bin/cp-cli.js",
   "jest": {
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "testPathIgnorePatterns": ["<rootDir>/bin"],
-    "moduleFileExtensions": ["ts", "tsx", "js", "json"]
+    "testPathIgnorePatterns": [
+      "<rootDir>/bin"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
   },
   "dependencies": {
     "fs-extra": "7.0.0",
