@@ -14,7 +14,7 @@ test(
   'print a help text when no arguments given',
   withAfterEach(t => {
     t.plan(1);
-    const { stderr } = shell.exec('node bin/cp-cli');
+    const { stderr } = shell.exec('node dist/src/cp-cli');
     t.notEqual(stderr, '');
   }),
 );
@@ -23,7 +23,7 @@ test(
   'print a help text when only one argument was given',
   withAfterEach(t => {
     t.plan(1);
-    const { stderr } = shell.exec('node bin/cp-cli foo');
+    const { stderr } = shell.exec('node dist/src/cp-cli foo');
     t.notEqual(stderr, '');
   }),
 );
@@ -32,7 +32,7 @@ test(
   'copy a source file to target dir',
   withAfterEach(t => {
     const { stderr } = shell.exec(
-      'node bin/cp-cli test/assets/foo.txt out/foo.txt',
+      'node dist/src/cp-cli test/assets/foo.txt out/foo.txt',
     );
     t.equal(stderr, '');
     fse.stat('out/foo.txt', (err, stats) => {
@@ -51,7 +51,7 @@ if (platform() !== 'win32') {
       shell.cd('test/assets');
       shell.ln('-s', 'foo.txt', 'bar.txt');
       shell.cd('../..');
-      const { stderr } = shell.exec('node bin/cp-cli -d test/assets out');
+      const { stderr } = shell.exec('node dist/src/cp-cli -d test/assets out');
       t.equal(stderr, '');
       let stats = await fse.stat('out/foo.txt');
       t.true(stats.isFile());
@@ -65,7 +65,7 @@ if (platform() !== 'win32') {
 test(
   'copy directory content',
   withAfterEach(t => {
-    const { stderr } = shell.exec('node bin/cp-cli test/assets out');
+    const { stderr } = shell.exec('node dist/src/cp-cli test/assets out');
     t.equal(stderr, '');
     fse.stat('out/foo.txt', (err, stats) => {
       t.equal(err, null);
@@ -79,7 +79,7 @@ test(
   'copy directory content when target directory does not exist',
   withAfterEach(async t => {
     await fse.ensureDir('out');
-    const { stderr } = shell.exec('node bin/cp-cli test/assets out');
+    const { stderr } = shell.exec('node dist/src/cp-cli test/assets out');
     t.equal(stderr, '');
     fse.stat('out/foo.txt', (err, stats) => {
       t.equal(err, null);
