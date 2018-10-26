@@ -3,10 +3,10 @@
   "version": "1.1.2",
   "description": "A 'cp' CLI util for Node.js",
   "scripts": {
+    "precommit": "pretty-quick --staged",
+    "prepublishOnly": "yarn clean && yarn build && yarn test",
     "build": "tsc",
     "clean": "rimraf dist",
-    "precommit": "pretty-quick --staged",
-    "prepublish": "npm run build && npm run lint && npm run test",
     "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
     "test": "tape -r source-map-support/register 'dist/test/**/*.js' | tap-spec"
   },
