@@ -8,7 +8,8 @@
     "build": "tsc",
     "clean": "rimraf dist",
     "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
-    "test": "tape -r source-map-support/register 'dist/test/**/*.js' | tap-spec"
+    "test:unit": "tape -r source-map-support/register 'dist/test/**/*.js' | tap-dot",
+    "test": "yarn lint && yarn test:unit"
   },
   "repository": {
     "type": "git",
@@ -43,7 +44,7 @@
     "rimraf": "2.6.2",
     "shelljs": "0.8.2",
     "source-map-support": "0.5.9",
-    "tap-spec": "5.0.0",
+    "tap-dot": "2.0.0",
     "tape": "4.9.1",
     "tslint": "5.11.0",
     "tslint-config-prettier": "1.15.0",
