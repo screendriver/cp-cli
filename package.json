@@ -5,7 +5,7 @@
   "scripts": {
     "precommit": "pretty-quick --staged",
     "prepublishOnly": "yarn clean && yarn build && yarn test",
-    "build": "tsc",
+    "build": "tsc --build",
     "clean": "rimraf dist",
     "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
     "test:unit": "tape -r source-map-support/register 'dist/test/**/*.js' | tap-dot",

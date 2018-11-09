@@ -1,23 +1,4 @@
 {
-  "compilerOptions": {
-    "outDir": "dist",
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "strict": true,
-    "noEmitOnError": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "lib": ["es5", "es2015.collection", "es2015.promise"],
-    "plugins": [
-      {
-        "name": "typescript-tslint-plugin"
-      }
-    ]
-  },
-  "include": ["src/**/*", "test/**/*"],
-  "exclude": ["node_modules"]
+  "files": [],
+  "references": [{ "path": "./src" }, { "path": "./test" }]
 }
