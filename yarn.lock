@@ -1182,10 +1182,10 @@ tsutils@^2.27.2:
   dependencies:
     tslib "^1.8.1"
 
-typescript-tslint-plugin@0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/typescript-tslint-plugin/-/typescript-tslint-plugin-0.0.6.tgz#edab93181bc69d691675afd6a438c680d1c8f04d"
-  integrity sha512-qpAXN8NRh359/e3qPYJulsypME5dgelFmdtWE2wJo3zVUYI3VSgmrQurkEvrd5aAyBSp89T6AtRwp4DLefQECg==
+typescript-tslint-plugin@0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/typescript-tslint-plugin/-/typescript-tslint-plugin-0.0.7.tgz#675c26a54b0156aec404abc264d0a87642151d5a"
+  integrity sha512-WH06dLcOjhc6fPwCUwPZKV4Dke7KvsHClZhOfa9WDnWqt08mOXx5h6o6901vakul9r82JFHWz5LSZIijXQZWLQ==
   dependencies:
     minimatch "^3.0.4"
     vscode-languageserver "^5.1.0"
