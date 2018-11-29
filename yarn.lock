@@ -1205,10 +1205,10 @@ tsutils@^2.27.2:
   dependencies:
     tslib "^1.8.1"
 
-typescript-tslint-plugin@0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/typescript-tslint-plugin/-/typescript-tslint-plugin-0.1.1.tgz#e63691f05512e59e01110473c7cad3fcbb01e32b"
-  integrity sha512-cXTGURCAP87xOOTOI+4IU2PvaVOgqtX4kYWuCKZd+UVcG2hPqBlRZrpDdfU7dUWNTC3aHR8PfuNVRfw2nMcVLA==
+typescript-tslint-plugin@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/typescript-tslint-plugin/-/typescript-tslint-plugin-0.1.2.tgz#2523a003ad399eeaf8b0b97fe1f0d80614cc5ecd"
+  integrity sha512-L50Bn6+HAQa5XTWB45Onb+xaxzuR75sdZclsMs6XKqMUr4lCaUH+JomliOHFuHierX0oUl6c5k5oyQ1Bjplxew==
   dependencies:
     minimatch "^3.0.4"
     mock-require "^3.0.2"
