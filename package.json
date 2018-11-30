@@ -39,7 +39,7 @@
     "@types/tape": "4.2.32",
     "@types/yargs": "12.0.1",
     "husky": "1.2.0",
-    "prettier": "1.15.2",
+    "prettier": "1.15.3",
     "pretty-quick": "1.8.0",
     "rimraf": "2.6.2",
     "shelljs": "0.8.3",
