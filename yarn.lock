@@ -41,10 +41,10 @@
     "@types/glob" "*"
     "@types/node" "*"
 
-"@types/tape@4.2.32":
-  version "4.2.32"
-  resolved "https://registry.yarnpkg.com/@types/tape/-/tape-4.2.32.tgz#1188330d22c4e822648c344faa070277737982d9"
-  integrity sha512-xil0KO5wkPoixdBWGIGolPv9dekf6dVkjjJLAFYchfKcd4DICou67rgGCIO7wAh3i5Ff/6j9IDgZz+GU9cMaqQ==
+"@types/tape@4.2.33":
+  version "4.2.33"
+  resolved "https://registry.yarnpkg.com/@types/tape/-/tape-4.2.33.tgz#3583953eaff5f8a77e65ad6ff197741457aaaab9"
+  integrity sha512-ltfyuY5BIkYlGuQfwqzTDT8f0q8Z5DGppvUnWGs39oqDmMd6/UWhNpX3ZMh/VYvfxs3rFGHMrLC/eGRdLiDGuw==
   dependencies:
     "@types/node" "*"
 
@@ -1166,10 +1166,10 @@ tap-out@^1.3.2:
     split "^1.0.0"
     trim "0.0.1"
 
-tape@4.9.1:
-  version "4.9.1"
-  resolved "https://registry.yarnpkg.com/tape/-/tape-4.9.1.tgz#1173d7337e040c76fbf42ec86fcabedc9b3805c9"
-  integrity sha512-6fKIXknLpoe/Jp4rzHKFPpJUHDHDqn8jus99IfPnHIjyz78HYlefTGD3b5EkbQzuLfaEvmfPK3IolLgq2xT3kw==
+tape@4.9.2:
+  version "4.9.2"
+  resolved "https://registry.yarnpkg.com/tape/-/tape-4.9.2.tgz#f233e40f09dc7e00fcf9b26755453c3822ad28c0"
+  integrity sha512-lPXKRKILZ1kZaUy5ynWKs8ATGSUO7HAFHCFnBam6FaGSqPdOwMWbxXHq4EXFLE8WRTleo/YOMXkaUTRmTB1Fiw==
   dependencies:
     deep-equal "~1.0.1"
     defined "~1.0.0"
