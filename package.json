@@ -8,8 +8,9 @@
     "build": "tsc --build",
     "clean": "rimraf dist",
     "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
-    "test:unit": "tape -r source-map-support/register 'dist/test/**/*.js' | tap-dot",
-    "test": "yarn lint && yarn test:unit"
+    "test:unit": "tape -r source-map-support/register 'dist/test/**/*.js'",
+    "test": "yarn lint && yarn test:unit | tap-dot",
+    "test:ci": "yarn lint && yarn test:unit | tap-xunit > test-results.xml"
   },
   "repository": {
     "type": "git",
