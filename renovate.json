@@ -1,8 +1,0 @@
-{
-  "extends": ["config:base"],
-  "commitMessagePrefix": "⬆️ ",
-  "rebaseStalePrs": true,
-  "nvm": {
-    "enabled": false
-  }
-}
