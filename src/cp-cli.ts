@@ -23,5 +23,6 @@ fse.copy(source, target, options).catch((error: Error) => {
   if (error) {
     // tslint:disable-next-line
     console.error(error);
+    process.exit(1);
   }
 });
