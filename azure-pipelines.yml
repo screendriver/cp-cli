@@ -11,22 +11,6 @@ pool:
   vmImage: $(imageName)
 
 steps:
-  - task: NodeTool@0
-    displayName: Install Node.js
-    inputs:
-      versionSpec: 11.x
-
-  - script: yarn install
-    displayName: Install dependencies
-
-  - script: yarn build
-    displayName: Build application
-
-  - script: yarn test:ci
-    displayName: Running tests
-
-  - task: PublishTestResults@2
-    inputs:
-      testResultsFiles: '**/test-results.xml'
-      testRunTitle: Test results for JavaScript
-    condition: succeededOrFailed()
+  - template: azure-pipelines-steps.yml
+    parameters:
+      nodeVersion: 11.x

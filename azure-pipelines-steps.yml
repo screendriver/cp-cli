@@ -1,0 +1,23 @@
+parameters:
+  nodeVersion: ''
+
+steps:
+  - task: NodeTool@0
+    displayName: Install Node.js
+    inputs:
+      versionSpec: ${{ parameters.nodeVersion }}
+
+  - script: yarn install
+    displayName: Install dependencies
+
+  - script: yarn build
+    displayName: Build application
+
+  - script: yarn test:ci
+    displayName: Running tests
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFiles: '**/test-results.xml'
+      testRunTitle: Test results for JavaScript
+    condition: succeededOrFailed()
