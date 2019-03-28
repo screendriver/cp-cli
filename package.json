@@ -10,7 +10,8 @@
     "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
     "test:unit": "tape -r source-map-support/register 'dist/test/**/*.js'",
     "test": "yarn lint && yarn test:unit | tap-dot",
-    "test:ci": "yarn lint && yarn test:unit | tap-xunit > test-results.xml"
+    "test:ci": "yarn lint && yarn test:unit | tap-xunit > test-results.xml",
+    "test:ci:windows": "yarn lint && yarn test:unit"
   },
   "repository": {
     "type": "git",

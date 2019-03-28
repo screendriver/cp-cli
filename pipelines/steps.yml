@@ -15,6 +15,11 @@ steps:
 
   - script: yarn test:ci
     displayName: Running tests
+    condition: or( eq( variables['Agent.OS'], 'Linux' ), eq( variables['Agent.OS'], 'Darwin' ) )
+
+  - script: yarn test:ci:windows
+    displayName: Running tests
+    condition: eq( variables['Agent.OS'], 'Windows_NT' )
 
   - task: PublishTestResults@2
     inputs:
