@@ -1,16 +1,54 @@
-strategy:
-  matrix:
-    linux:
-      imageName: ubuntu-16.04
-    mac:
-      imageName: macos-10.13
-    windows:
-      imageName: vs2017-win2016
+jobs:
+  - job: Linux
+    strategy:
+      matrix:
+        node_8_x:
+          nodeVersion: 8.x
+        node_9_x:
+          nodeVersion: 9.x
+        node_10_x:
+          nodeVersion: 10.x
+        node_11_x:
+          nodeVersion: 11.x
+    pool:
+      vmImage: ubuntu-16.04
+    steps:
+      - template: azure-pipelines-steps.yml
+        parameters:
+          nodeVersion: $(nodeVersion)
 
-pool:
-  vmImage: $(imageName)
+  - job: macOS
+    strategy:
+      matrix:
+        node_8_x:
+          nodeVersion: 8.x
+        node_9_x:
+          nodeVersion: 9.x
+        node_10_x:
+          nodeVersion: 10.x
+        node_11_x:
+          nodeVersion: 11.x
+    pool:
+      vmImage: macos-10.13
+    steps:
+      - template: azure-pipelines-steps.yml
+        parameters:
+          nodeVersion: $(nodeVersion)
 
-steps:
-  - template: azure-pipelines-steps.yml
-    parameters:
-      nodeVersion: 11.x
+  - job: Windows
+    strategy:
+      matrix:
+        node_8_x:
+          nodeVersion: 8.x
+        node_9_x:
+          nodeVersion: 9.x
+        node_10_x:
+          nodeVersion: 10.x
+        node_11_x:
+          nodeVersion: 11.x
+    pool:
+      vmImage: vs2017-win2016
+    steps:
+      - template: azure-pipelines-steps.yml
+        parameters:
+          nodeVersion: $(nodeVersion)
