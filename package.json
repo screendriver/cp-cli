@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@types/fs-extra": "5.0.4",
-    "@types/shelljs": "0.8.0",
+    "@types/shelljs": "0.8.3",
     "@types/tape": "4.2.32",
     "@types/yargs": "12.0.1",
     "husky": "1.2.0",
