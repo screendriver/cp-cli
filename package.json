@@ -38,7 +38,7 @@
   "devDependencies": {
     "@types/fs-extra": "5.0.4",
     "@types/shelljs": "0.8.0",
-    "@types/tape": "4.2.32",
+    "@types/tape": "4.2.33",
     "@types/yargs": "12.0.1",
     "husky": "1.2.0",
     "prettier": "1.15.2",
@@ -48,7 +48,7 @@
     "source-map-support": "0.5.9",
     "tap-dot": "2.0.0",
     "tap-xunit": "2.3.0",
-    "tape": "4.9.1",
+    "tape": "4.10.1",
     "tslint": "5.14.0",
     "tslint-config-prettier": "1.18.0",
     "typescript": "3.1.6",
