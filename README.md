@@ -3,6 +3,14 @@
 [![Build Status](https://dev.azure.com/screendriver/cp-cli/_apis/build/status/screendriver.cp-cli?branchName=master)](https://dev.azure.com/screendriver/cp-cli/_build/latest?definitionId=8&branchName=master)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
 
+## This GitHub project has been archived in favour of
+
+- [cpy-cli](https://github.com/sindresorhus/cpy-cli)
+- [ncp](https://github.com/AvianFlu/ncp)
+- [cpx](https://github.com/mysticatea/cpx)
+
+---
+
 The [UNIX command](<https://en.wikipedia.org/wiki/Cp_(Unix)>) `cp` for Node.js
 which is useful for cross platform support.
 
