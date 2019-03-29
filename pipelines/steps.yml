@@ -1,0 +1,28 @@
+parameters:
+  nodeVersion: ''
+
+steps:
+  - task: NodeTool@0
+    displayName: Install Node.js
+    inputs:
+      versionSpec: ${{ parameters.nodeVersion }}
+
+  - script: yarn install
+    displayName: Install dependencies
+
+  - script: yarn build
+    displayName: Build application
+
+  - script: yarn test:ci
+    displayName: Running tests
+    condition: or( eq( variables['Agent.OS'], 'Linux' ), eq( variables['Agent.OS'], 'Darwin' ) )
+
+  - script: yarn test:ci:windows
+    displayName: Running tests
+    condition: eq( variables['Agent.OS'], 'Windows_NT' )
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFiles: '**/test-results.xml'
+      testRunTitle: Test results for JavaScript
+    condition: succeededOrFailed()

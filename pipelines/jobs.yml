@@ -1,0 +1,22 @@
+parameters:
+  name: ''
+  vmImage: ''
+
+jobs:
+  - job: ${{ parameters.name }}
+    strategy:
+      matrix:
+        node_8_x:
+          nodeVersion: 8.x
+        node_9_x:
+          nodeVersion: 9.x
+        node_10_x:
+          nodeVersion: 10.x
+        node_11_x:
+          nodeVersion: 11.x
+    pool:
+      vmImage: ${{ parameters.vmImage }}
+    steps:
+      - template: steps.yml
+        parameters:
+          nodeVersion: $(nodeVersion)
